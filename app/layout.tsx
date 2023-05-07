@@ -2,7 +2,7 @@ import './globals.css'
 import { Nunito } from 'next/font/google'
 import Navbar from './components/Navbar/Navbar'
 import ClientOnly from './components/ClientOnly'
-import Modal from './components/Modal'
+import Modal from './models/Modal'
 const inter = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
