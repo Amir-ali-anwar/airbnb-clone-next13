@@ -3,7 +3,7 @@ import React from 'react'
 
 type MenuItemProps = {
   label:string,
-  onClick:()=>void
+  onClick: () => void;
 }
 
 const MenuItem:React.FC<MenuItemProps> = ({onClick,label}) => {

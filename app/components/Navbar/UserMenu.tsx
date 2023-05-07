@@ -3,10 +3,9 @@ import React from 'react'
 import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
 import { AiOutlineMenu } from "react-icons/ai";
-
-type Props = {}
-
-const UserMenu = (props: Props) => {
+import useRegisterModal from '@/app/hooks/useRegisterModal';
+const UserMenu = () => {
+    const registerModal =useRegisterModal()
     const [isOpen, SetIsOpen] = React.useState(false)
     const toggleHandler = () => {
         SetIsOpen((prevstate) => {
@@ -72,7 +71,7 @@ const UserMenu = (props: Props) => {
                                 <MenuItem label="Airbnb your home" onClick={() => { }} />
                                 <hr />
                                 <MenuItem label="Login" onClick={() => { }} />
-                                <MenuItem label="Sign up" onClick={() => { }} />
+                                <MenuItem label="Sign up" onClick={registerModal.onOpen} />
 
                             </>
                         </div>
