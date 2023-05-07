@@ -80,13 +80,13 @@ const RegisterModal = () => {
         <Button 
         outline 
         label="Continue with Google"
-        icon={FcGoogle}
+        Icon={FcGoogle}
         onClick={() => {}} 
       />
        <Button 
         outline 
         label="Continue with Github"
-        icon={AiFillGithub}
+        Icon={AiFillGithub}
       />
        <div 
         className="
@@ -97,6 +97,11 @@ const RegisterModal = () => {
         "
       >
         <p>Already have an account?
+          <span    className="
+              text-neutral-800
+              cursor-pointer 
+              hover:underline
+            ">Log in</span>
           </p>
       </div>
       </div>
