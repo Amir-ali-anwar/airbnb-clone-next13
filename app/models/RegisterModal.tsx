@@ -7,8 +7,9 @@ import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Modal from "./Modal";
+import Heading from "../components/Heading";
 import useRegisterModal from "../hooks/useRegisterModal";
-type Props = {};
+import Input from "../components/Input/Input";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -39,6 +40,15 @@ const RegisterModal = () => {
       setIsLoading(false);
     }
   };
+  const bodyContent=(
+    <div className="flex flex-col gap-4">
+      <Heading 
+       title="Welcome to Airbnb" 
+       subTitle="Create an account" 
+      />
+      <Input />
+    </div>
+  )
   return (
     <Modal 
       disabled={isLoading}
@@ -47,6 +57,7 @@ const RegisterModal = () => {
       actionLabel="Continue"
       onClose={registerModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
+      body={bodyContent}
   />
   ) 
 };
