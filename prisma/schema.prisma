@@ -20,5 +20,17 @@ model User {
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   favoriteIds    String[]  @db.ObjectId
-  
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accounts Account[]
+  listings Listing[]
+  reservations Reservation[]
+}
+model Account {
+
+}
+model Listing {
+
+}
+model Reservation {
+
 }
